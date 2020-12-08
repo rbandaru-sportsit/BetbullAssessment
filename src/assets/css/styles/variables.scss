@@ -1,0 +1,8 @@
+$smallMobileDevice-minWidth: 320px;
+$smallMobileDevice-maxWidth: 414px;
+$mediaQueryRange-mobileDevice: "(min-width: #{$smallMobileDevice-minWidth}) and (max-width: #{$smallMobileDevice-maxWidth})";
+@media screen and #{$mediaQueryRange-mobileDevice} {
+   
+}
+
+$SM-primaryColor: #13b463;

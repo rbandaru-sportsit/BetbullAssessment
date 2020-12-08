@@ -1,0 +1,321 @@
+.SM-section{
+    padding: 30px 0;    
+}
+.SM-section-highlight{
+    background-color: #000 !important;
+    color: #FFF !important;    
+}
+// .SM-pageTitle{
+//     color: #000;
+//     margin-bottom: 20px;
+//     h1{
+//         font-size: 55px;
+//     }
+//     h4{
+//         font-weight: normal;
+//     }
+// }
+.SM-txtPrimary{
+    color: $SM-primaryColor;
+}
+.SM-txtGrey{
+    color: #919191;
+}
+.SM-txt-white{
+    color: #FFF !important;
+}
+.caret{
+    display: inline-block;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+}
+
+
+
+.SM-play-section{
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+.SM-deck {
+    // perspective: 1500px;
+    justify-content: center;
+    text-align: center;
+}
+   
+  .SM-card {
+    // perspective: 1500px;
+    display: inline-flex;
+    padding: 2px;
+  }
+  .SM-score{
+    padding-top: 4px;
+    span{
+      font-weight: 600;
+      color: #ffd432;
+    }
+  }
+
+  /* --- CARD SETTINGS --- */
+  
+  .SM-card>input,
+  .SM-card>.SM-front,
+  .SM-card>.SM-back {
+    width: 83px;
+    height: 126px;
+    position: relative;
+  }
+  
+  .SM-card>input {
+    // margin: 0 5px 10px;
+    z-index: 999;
+    cursor: pointer;
+    opacity: 0;
+  }
+  
+  .SM-card>.SM-front,
+  .SM-card>.SM-back {
+    //left: -5px; /* Subtract margin value */
+    margin-left: -84px; /* Subtract width value */
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    border-radius: 8px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* --- SCORE CARD TABLE --- */
+  .table-bordered thead th {
+    border-bottom-width: 1px;
+  }
+  .table thead th{
+    color: #ffd432;
+    font-size: 13px;
+  }
+
+
+
+  /* --- FRONT CONTENT --- */
+  
+  .SM-card>.SM-front{
+    background: #f8fff9;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .SM-card>.SM-front::before,
+  .SM-card>.SM-front::after {
+    position: absolute;
+    display: block;
+    font-family: Marvel, "Trebuchet MS", Helvetica, sans-serif;
+  }
+  
+  .SM-card>.SM-front::before {
+    top: 10px;
+    left: 2px;
+    width: 20px;
+    font-size: 1.38em;
+    line-height: 1em;
+  }
+  
+  .SM-card>.SM-front::after {
+    bottom: 14px;
+    right: 7px;
+    width: 63%;
+    height: 70%;
+    padding-top: 5%;
+    white-space: pre;
+    border: 1px solid;
+    border-radius: 4px;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  
+  /* --- COMMON RULES FOR CARD SUIT --- */
+  
+  .SM-card>[class*=h],
+  .SM-card>[class*=d]{
+    color: #f21;
+    border-color: #f21;
+  }
+  .SM-card>[class*=c],
+  .SM-card>[class*=s]{
+    color:#123;
+    border-color: #123;
+  }
+  
+  /* --- COMMON RULES FOR CARD VALUE --- */
+  
+  .SM-card>[class$=A]::after{font-size:4em;line-height:1.2em}
+  .SM-card>[class$='2']::after,
+  .SM-card>[class$='3']::after,
+  .SM-card>[class$='4']::after,
+  .SM-card>[class$='5']::after,
+  .SM-card>[class$='6']::after,
+  .SM-card>[class$='7']::after{font-size: 1.5em;line-height:.6em}
+  .SM-card>[class$='8']::after,
+  .SM-card>[class$='9']::after,
+  .SM-card>[class$='0']::after{font-size: 1.5em;line-height:.2em}
+  .SM-card>[class$=J]::after,
+  .SM-card>[class$=Q]::after,
+  .SM-card>[class$=K]::after{font-size:3em;line-height:.8em}
+  
+  /* Hearts */
+  
+  .SM-card>.hA::before{content:'A \2665'}
+  .SM-card>.hA::after{content:'\2665';}
+  .SM-card>.h2::before{content:'2 \2665'}
+  .SM-card>.h2::after{content:'\2665\a\a\a\a\2665'}
+  .SM-card>.h3::before{content:'3 \2665'}
+  .SM-card>.h3::after{content:'\2665\a\a\2665\a\a\2665'}
+  .SM-card>.h4::before{content:'4 \2665'}
+  .SM-card>.h4::after{content:'\2665    \2665\a\a\a\a\2665    \2665'}
+  .SM-card>.h5::before{content:'5 \2665'}
+  .SM-card>.h5::after{content:'\2665    \2665\a\a\2665\a\a\2665    \2665'}
+  .SM-card>.h6::before{content:'6 \2665'}
+  .SM-card>.h6::after{content:'\2665    \2665\a\a\2665    \2665\a\a\2665    \2665'}
+  .SM-card>.h7::before{content:'7 \2665'}
+  .SM-card>.h7::after{content:'\2665    \2665\a\2665\a\2665    \2665\a\a\2665    \2665'}
+  .SM-card>.h8::before{content:'8 \2665'}
+  .SM-card>.h8::after{content:'\a\2665    \2665\a\a\a\a\2665    \2665\a\a\a\a\2665    \2665\a\a\a\a\2665    \2665'}
+  .SM-card>.h9::before{content:'9 \2665'}
+  .SM-card>.h9::after{content:'\a\2665    \2665\a\a\2665\a\a\2665    \2665\a\a\a\a\2665    \2665\a\a\a\a\2665    \2665'}
+  .SM-card>.h10::before{content:'10 \2665'}
+  .SM-card>.h10::after{content:'\a\2665    \2665\a\a\2665\a\a\2665    \2665\a\a\a\a\2665    \2665\a\a\2665\a\a\2665    \2665'}
+  .SM-card>.hJ::before{content:'J \2665'}
+  .SM-card>.hJ::after{content:'J\a\2665'}
+  .SM-card>.hQ::before{content:'Q \2665'}
+  .SM-card>.hQ::after{content:'Q\a\2665'}
+  .SM-card>.hK::before{content:'K \2665'}
+  .SM-card>.hK::after{content:'K\a\2665'}
+  
+  /* Clubs */
+  
+  .SM-card>.cA::before{content:'A \2663'}
+  .SM-card>.cA::after{content:'\2663'}
+  .SM-card>.c2::before{content:'2 \2663'}
+  .SM-card>.c2::after{content:'\2663\a\a\a\a\2663'}
+  .SM-card>.c3::before{content:'3 \2663'}
+  .SM-card>.c3::after{content:'\2663\a\a\2663\a\a\2663'}
+  .SM-card>.c4::before{content:'4 \2663'}
+  .SM-card>.c4::after{content:'\2663    \2663\a\a\a\a\2663    \2663'}
+  .SM-card>.c5::before{content:'5 \2663'}
+  .SM-card>.c5::after{content:'\2663    \2663\a\a\2663\a\a\2663    \2663'}
+  .SM-card>.c6::before{content:'6 \2663'}
+  .SM-card>.c6::after{content:'\2663    \2663\a\a\2663    \2663\a\a\2663    \2663'}
+  .SM-card>.c7::before{content:'7 \2663'}
+  .SM-card>.c7::after{content:'\2663    \2663\a\2663\a\2663    \2663\a\a\2663    \2663'}
+  .SM-card>.c8::before{content:'8 \2663'}
+  .SM-card>.c8::after{content:'\a\2663    \2663\a\a\a\a\2663    \2663\a\a\a\a\2663    \2663\a\a\a\a\2663    \2663'}
+  .SM-card>.c9::before{content:'9 \2663'}
+  .SM-card>.c9::after{content:'\a\2663    \2663\a\a\2663\a\a\2663    \2663\a\a\a\a\2663    \2663\a\a\a\a\2663    \2663'}
+  .SM-card>.c10::before{content:'10 \2663'}
+  .SM-card>.c10::after{content:'\a\2663    \2663\a\a\2663\a\a\2663    \2663\a\a\a\a\2663    \2663\a\a\2663\a\a\2663    \2663'}
+  .SM-card>.cJ::before{content:'J \2663'}
+  .SM-card>.cJ::after{content:'J\a\2663'}
+  .SM-card>.cQ::before{content:'Q \2663'}
+  .SM-card>.cQ::after{content:'Q\a\2663'}
+  .SM-card>.cK::before{content:'K \2663'}
+  .SM-card>.cK::after{content:'K\a\2663'}
+  
+  /* Diamonds */
+  
+  .SM-card>.dA::before{content:'A \2666'}
+  .SM-card>.dA::after{content:'\2666'}
+  .SM-card>.d2::before{content:'2 \2666'}
+  .SM-card>.d2::after{content:'\2666\a\a\a\a\2666'}
+  .SM-card>.d3::before{content:'3 \2666'}
+  .SM-card>.d3::after{content:'\2666\a\a\2666\a\a\2666'}
+  .SM-card>.d4::before{content:'4 \2666'}
+  .SM-card>.d4::after{content:'\2666    \2666\a\a\a\a\2666    \2666'}
+  .SM-card>.d5::before{content:'5 \2666'}
+  .SM-card>.d5::after{content:'\2666    \2666\a\a\2666\a\a\2666    \2666'}
+  .SM-card>.d6::before{content:'6 \2666'}
+  .SM-card>.d6::after{content:'\2666    \2666\a\a\2666    \2666\a\a\2666    \2666'}
+  .SM-card>.d7::before{content:'7 \2666'}
+  .SM-card>.d7::after{content:'\2666    \2666\a\2666\a\2666    \2666\a\a\2666    \2666'}
+  .SM-card>.d8::before{content:'8 \2666'}
+  .SM-card>.d8::after{content:'\a\2666    \2666\a\a\a\a\2666    \2666\a\a\a\a\2666    \2666\a\a\a\a\2666    \2666'}
+  .SM-card>.d9::before{content:'9 \2666'}
+  .SM-card>.d9::after{content:'\a\2666    \2666\a\a\2666\a\a\2666    \2666\a\a\a\a\2666    \2666\a\a\a\a\2666    \2666'}
+  .SM-card>.d10::before{content:'10 \2666'}
+  .SM-card>.d10::after{content:'\a\2666    \2666\a\a\2666\a\a\2666    \2666\a\a\a\a\2666    \2666\a\a\2666\a\a\2666    \2666'}
+  .SM-card>.dJ::before{content:'J \2666'}
+  .SM-card>.dJ::after{content:'J\a\2666'}
+  .SM-card>.dQ::before{content:'Q \2666'}
+  .SM-card>.dQ::after{content:'Q\a\2666'}
+  .SM-card>.dK::before{content:'K \2666'}
+  .SM-card>.dK::after{content:'K\a\2666'}
+  
+  /* Spades */
+  
+  .SM-card>.sA::before{content:'A \2660'}
+  .SM-card>.sA::after{content:'\2660'}
+  .SM-card>.s2::before{content:'2 \2660'}
+  .SM-card>.s2::after{content:'\2660\a\a\a\a\2660'}
+  .SM-card>.s3::before{content:'3 \2660'}
+  .SM-card>.s3::after{content:'\2660\a\a\2660\a\a\2660'}
+  .SM-card>.s4::before{content:'4 \2660'}
+  .SM-card>.s4::after{content:'\2660    \2660\a\a\a\a\2660    \2660'}
+  .SM-card>.s5::before{content:'5 \2660'}
+  .SM-card>.s5::after{content:'\2660    \2660\a\a\2660\a\a\2660    \2660'}
+  .SM-card>.s6::before{content:'6 \2660'}
+  .SM-card>.s6::after{content:'\2660    \2660\a\a\2660    \2660\a\a\2660    \2660'}
+  .SM-card>.s7::before{content:'7 \2660'}
+  .SM-card>.s7::after{content:'\2660    \2660\a\2660\a\2660    \2660\a\a\2660    \2660'}
+  .SM-card>.s8::before{content:'8 \2660'}
+  .SM-card>.s8::after{content:'\a\2660    \2660\a\a\a\a\2660    \2660\a\a\a\a\2660    \2660\a\a\a\a\2660    \2660'}
+  .SM-card>.s9::before{content:'9 \2660'}
+  .SM-card>.s9::after{content:'\a\2660    \2660\a\a\2660\a\a\2660    \2660\a\a\a\a\2660    \2660\a\a\a\a\2660    \2660'}
+  .SM-card>.s10::before{content:'10 \2660'}
+  .SM-card>.s10::after{content:'\a\2660    \2660\a\a\2660\a\a\2660    \2660\a\a\a\a\2660    \2660\a\a\2660\a\a\2660    \2660'}
+  .SM-card>.sJ::before{content:'J \2660'}
+  .SM-card>.sJ::after{content:'J\a\2660'}
+  .SM-card>.sQ::before{content:'Q \2660'}
+  .SM-card>.sQ::after{content:'Q\a\2660'}
+  .SM-card>.sK::before{content:'K \2660'}
+  .SM-card>.sK::after{content:'K\a\2660'}
+  
+  /* --- BACK CONTENT --- */
+  
+  .SM-card>.SM-back {
+    background: #000000;
+    background: linear-gradient(#000000, #222222);
+    border: 5px solid #f8fff9;
+    box-sizing: border-box;
+  }
+  
+  .SM-card>.SM-back::before,
+  .SM-card>.SM-back::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0 ; 
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: url('https://blog.codepen.io/wp-content/uploads/2012/06/Button-Fill-White-Small.png') center/36px;
+    border-radius: inherit;
+    opacity: .3;
+  }
+  
+  .SM-card>.SM-back::after {
+    background-position: calc(50% + 18px) calc(50% + 18px);
+  }
+  
+  /* --- ANIMATION AND 3D SETTINGS --- */
+  
+  
+  
+  
+  
+  
+  

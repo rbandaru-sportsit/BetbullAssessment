@@ -1,0 +1,177 @@
+.SM-formControl-group{
+    margin-bottom: 15px;
+}
+.SM-formLabel{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.SM-formControl{  
+    input{
+        background-color: #FFF;
+        border-radius: 4px;
+        border: 1px solid #FFF;
+        padding: 6px 12px;
+        height: 42px;
+        width: 100%;
+        font-size: 16px;
+        color: #000;
+    }
+}
+
+.SM-select{
+    border: 1px solid #444;
+    
+    select{
+        width: 100%;
+        padding: 0 10px;
+        border: 0;
+        font-size: 16px;
+        height: 32px;
+        &:focus{
+            outline: none;
+        }
+    }
+}
+
+textarea{
+
+}
+.SM-validationMsg{
+    color: #fd4051;
+  }
+
+// .SM-formControl{  
+
+//     [type="radio"]:checked,
+//     [type="radio"]:not(:checked) {
+//         position: absolute;
+//         left: -9999px;
+//     }
+//     [type="radio"]:checked + label,
+//     [type="radio"]:not(:checked) + label
+//     {
+//         position: relative;
+//         padding-left: 40px;
+//         cursor: pointer;
+//         line-height: 25px;
+//         display: inline-block;
+//         color: #666;
+//     }
+//     [type="radio"]:checked + label:before,
+//     [type="radio"]:not(:checked) + label:before {
+//     content: '';
+//         position: absolute;
+//         left: 0;
+//         top: 0;
+//         width: 24px;
+//         height: 24px;
+//         border: 1px solid #ddd;
+//         border-radius: 100%;
+//         background: #fff;
+//         box-shadow: 0 .4rem 1rem rgba(0,0,0,.15);
+//     }
+//     [type="radio"]:checked + label:after,
+//     [type="radio"]:not(:checked) + label:after {
+//     content: '';
+//         width: 12px;
+//         height: 12px;
+//         background: #000;
+//         position: absolute;
+//         top: 6px;
+//         left: 6px;
+//         border-radius: 100%;
+//         -webkit-transition: all 0.2s ease;
+//         transition: all 0.2s ease;
+
+//     }
+//     [type="radio"]:not(:checked) + label:after {
+//         opacity: 0;
+//         -webkit-transform: scale(0);
+//         transform: scale(0);
+//     }
+//     [type="radio"]:checked + label:after {
+//         opacity: 1;
+//         -webkit-transform: scale(1);
+//         transform: scale(1);
+//     }
+
+// }
+
+
+
+
+// #half-stars-example {
+  
+//     /* use display:inline-flex to prevent whitespace issues. alternatively, you can put all the children of .rating-group on a single line */
+//     .rating-group {
+//       display: inline-flex;
+//     }
+    
+//     /* make hover effect work properly in IE */
+//     .rating__icon {
+//       pointer-events: none;
+//     }
+    
+//     /* hide radio inputs */
+//     .rating__input {
+//      position: absolute !important;
+//      left: -9999px !important;
+//     }
+  
+//     /* set icon padding and size */
+//     .rating__label {
+//       cursor: pointer;
+//       /* if you change the left/right padding, update the margin-right property of .rating__label--half as well. */
+//       padding: 0 0.1em;
+//       font-size: 2rem;
+//     }
+  
+//     /* add padding and positioning to half star labels */
+//     .rating__label--half {
+//       padding-right: 0;
+//       margin-right: -0.6em;
+//       z-index: 2;
+//     }
+    
+//     /* set default star color */
+//     .rating__icon--star {
+//       color: #EB2227;
+//     }
+    
+//     /* set color of none icon when unchecked */
+//     .rating__icon--none {
+//       color: #eee;
+//     }
+  
+//     /* if none icon is checked, make it red */
+//     .rating__input--none:checked + .rating__label .rating__icon--none {
+//       color: red;
+//     }
+  
+//     /* if any input is checked, make its following siblings grey */
+//     .rating__input:checked ~ .rating__label .rating__icon--star {
+//       color: #ddd;
+//     }
+    
+//     /* make all stars orange on rating group hover */
+//     .rating-group:hover .rating__label .rating__icon--star,
+//     .rating-group:hover .rating__label--half .rating__icon--star {
+//       color: #EB2227;
+//     }
+  
+//     /* make hovered input's following siblings grey on hover */
+//     .rating__input:hover ~ .rating__label .rating__icon--star,
+//     .rating__input:hover ~ .rating__label--half .rating__icon--star {
+//       color: #ddd;
+//     }
+    
+//     /* make none icon grey on rating group hover */
+//     .rating-group:hover .rating__input--none:not(:hover) + .rating__label .rating__icon--none {
+//        color: #eee;
+//     }
+  
+//     /* make none icon red on hover */
+//     .rating__input--none:hover + .rating__label .rating__icon--none {
+//       color: red;
+//     }
+//   }

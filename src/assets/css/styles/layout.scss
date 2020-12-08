@@ -1,0 +1,13 @@
+
+.container-fluid{
+   width: 90%;
+   @media (max-width: 767.98px) { 
+      width: 100%;
+   }
+ //   @include media-breakpoint-up(sm) {
+ //       width: 100%;
+ //  }
+ @media (max-width: 1366px) { 
+    width: 100%;
+  }
+}

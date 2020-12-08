@@ -1,0 +1,50 @@
+//====================================
+//Buttons
+//====================================
+.btn {
+    cursor: pointer;    
+    font-family: Montserrat, Arial;
+    white-space: nowrap;    
+    font-weight: 600;
+    height: 36px;
+    font-size: 14px;
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+.SM-btnXLarge{
+    height: 80px;
+    font-size: 26px;
+}
+.SM-btnLarge{
+    height: 55px;
+    font-size: 20px;
+}
+.SM-btnMedium{
+    height: 44px;
+    font-size: 14px;
+}
+.SM-btnPrimary{
+    background-color: $SM-primaryColor;
+    color: #FFF;    
+    &:hover{
+        color: #FFF;
+    }
+}
+
+.SM-btnSecondary{
+    background-color: #42C1CA;
+    color: #FFF;    
+    &:hover{
+        color: #FFF;
+    }
+}
+.SM-btnPlay{
+    height: 42px;
+    border-radius: 20px;
+}
+.pt-100{
+    padding-top: 100px;
+}
+
