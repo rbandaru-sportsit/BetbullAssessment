@@ -12,6 +12,10 @@ export const GamePageSlice = createSlice({
     },
     reducers: {
         getFilteredData: (state, action) => {
+            // Redux allows us to write "mutating" logic in reducers. It
+            // doesn't actually mutate the state because it uses the Immer library,
+            // which detects changes to a "draft state" and produces a brand new
+            // immutable state based off those changes
             state.displayFilteredData = action.payload.getRandomData;
             state.isDisplayPlayButton = action.payload.isDisplayPlayButton;
             state.isDisplayNextButton = action.payload.isDisplayNextButton;
