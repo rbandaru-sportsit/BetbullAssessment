@@ -97,7 +97,7 @@ export const getNextCardsData = (data, displayData, score) => dispatch => {
         } else if (displayData[0].name === displayData[1].name) {
             getScore = getScore + 5;
         } else if (Number(displayData[0].symbol) === Number(displayData[1].symbol)) {
-            getScore = getScore + 6;
+            getScore = getScore + 5;
         } else {
             getScore = getScore + 0;
         }
