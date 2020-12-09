@@ -15,12 +15,6 @@ class ScorePage extends Component {
         return (
             <main role="main" className="SM-home">
                 <div className="SM-section px-3">
-                    {/* <div className="SM-formControl-group mb-4">
-                    <div className="SM-formLabel SM-txt-white">UserName</div>
-                    <span>{this.props.userSelectedName}</span>
-                    <div className="SM-formLabel SM-txt-white">score</div>
-                    <span>{this.props.userScore}</span>
-                    </div> */}
                     <table className="table table-bordered SM-txt-white text-center">
                         <thead>
                             <tr>
@@ -28,7 +22,7 @@ class ScorePage extends Component {
                                 <th>Score</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody data-scoretable='component-scorePageRecordsDisplay'>
                             {
                                 this.props.getAllUsersDetails && this.props.getAllUsersDetails.map((item, index) => {
                                     return <tr key={index}>

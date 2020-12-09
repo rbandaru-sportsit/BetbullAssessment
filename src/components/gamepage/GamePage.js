@@ -50,7 +50,7 @@ class GamePage extends Component {
                     <div className="SM-deck">
                         {
                             this.props.getDisplayData && this.props.getDisplayData.map((item, index) => {
-                                return <div className="SM-card" key={index}>
+                                return <div className="SM-card" key={index} datagamepage='component-gamepagedisplay'>
                                     <input type="checkbox" defaultChecked />
                                     {item.isCardDisplay === true ? <div className={"SM-front " + item.code}></div> : <div className={"SM-back " + item.code}></div>}
                                 </div>
@@ -61,7 +61,7 @@ class GamePage extends Component {
                         {this.props.isDisplayNextButton ? <div className="col text-center">
                             <button className="btn SM-btnPrimary SM-btnMedium w-50 mt-4" onClick={() => this.nextButtonClick()}>Pick Next</button>
                         </div> : ""}</div>
-                    {this.props.isDisplayNewGameButton ? <div className="text-center SM-score">Your Score is : <span>{this.props.userScore}</span></div> : ""}
+                    {this.props.isDisplayNewGameButton ? <div className="text-center SM-score">Your Score is : <span datagamescore='component-gamescoredisplay'>{this.props.userScore}</span></div> : ""}
                     <div className="row">
                         {this.props.isDisplayNewGameButton ? <div className="col-6 pl-3 pr-1">
                             <button className="btn SM-btnPrimary SM-btnMedium w-100 mt-4" onClick={() => this.startButtonClick()}>New Game</button>

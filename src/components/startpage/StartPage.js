@@ -30,7 +30,7 @@ class StartPage extends Component {
                     <div className="SM-formControl" data-test='component-startPage'>
                         <input className="" type="text" placeholder="Name" onKeyUp={(event) => this.getUserName(event)} />
                     </div>
-                    {this.props.userSelectedName === '' ? <div className="SM-validationMsg">Please enter username to play</div> : ''}
+                    {this.props.userSelectedName === '' ? <div className="SM-validationMsg" data-testmsg='component-startPageValidationMsg'>Please enter username to play</div> : ''}
                     </div>
                 <button className="btn SM-btnPrimary SM-btnMedium w-100" onClick={() => this.gotoGamePage()}>Play</button>
 		   </div>
