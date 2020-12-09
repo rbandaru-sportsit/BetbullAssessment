@@ -2,23 +2,29 @@ import { createSlice } from '@reduxjs/toolkit';
 
 
 export const StartPageSlice = createSlice({
-  name: 'startpage',
-  initialState: {
-      userSelectedName: ''
-  },
-  reducers: {
-      getUserName: (state, action) => {
-          state.userSelectedName = action.payload;
-      },
+    name: 'startpage',
+    initialState: {
+        userSelectedName: ''
+    },
+    reducers: {
+        getUserName: (state, action) => {
+            // Redux allows us to write "mutating" logic in reducers. It
+            // doesn't actually mutate the state because it uses the Immer library,
+            // which detects changes to a "draft state" and produces a brand new
+            // immutable state based off those changes
+            state.userSelectedName = action.payload;
+        },
 
-      resetUserName: (state, action) => {
-          state.userSelectedName = '';
-      },
-  },
+        resetUserName: (state, action) => {
+            state.userSelectedName = '';
+        },
+    },
 });
 
 export const { getUserName, resetUserName } = StartPageSlice.actions;
 
+// The function below can be dispatched like a regular action. This
+// will call the thunk with the `dispatch` function as the first argument. All actions can be dispatched.
 export const gotoGamePage = (name, props) => dispatch => {
     if (name !== "") {
         var getUsersDetails = {
