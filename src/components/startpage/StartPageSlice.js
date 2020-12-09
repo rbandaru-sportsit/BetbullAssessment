@@ -38,8 +38,11 @@ export const gotoGamePage = (name, props) => dispatch => {
             }
             if (getAllUserNames.indexOf(name) === -1) {
                 getDataFromLocalStorage.push(getUsersDetails);
+                localStorage.setItem('userName', name);
             }
             localStorage.setItem('userData', JSON.stringify(getDataFromLocalStorage));
+        } else {
+            localStorage.setItem('userName', name);
         }
         dispatch(getUserName(name));
         props.history.push('/game');
